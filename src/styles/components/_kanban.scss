@@ -1,0 +1,53 @@
+.kanban {
+  @include flex();
+
+  &__section {
+    width: calc(100% / 3);
+    padding: 0 5px;
+    border-radius: 10px;
+
+    & ~ & {
+      margin-left: 10px;
+    }
+
+    &__title {
+      font-size: 14px;
+      height: 34px;
+      width: fit-content;
+      text-transform: capitalize;
+
+      @include flex(center);
+      gap: 14px;
+
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+
+      &-1 > span {
+        background-color: var(--color-span-doing-background) !important;
+        color: var(--color-span-doing-text) !important;
+      }
+
+      &-2 > span {
+        background-color: var(--color-span-done-background) !important;
+        color: var(--color-span-done-text) !important;
+      }
+
+      span {
+        padding: 0 6px;
+        height: 18px;
+        border-radius: 3px;
+        background-color: var(--color-span-to-do-background);
+        color: var(--color-span-to-do-text);
+
+        @include flex(center, center);
+      }
+    }
+
+    &__content {
+      & > * ~ * {
+        margin-top: 5px;
+      }
+    }
+  }
+}

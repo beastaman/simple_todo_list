@@ -1,0 +1,83 @@
+.header {
+  height: 45px;
+  padding-left: 12px;
+  padding-right: 10px;
+
+  @include flex(center, space-between);
+
+  &-left {
+    @include flex(center);
+    gap: 15px;
+  }
+
+  &-right {
+    .dropdown {
+      &-toggle {
+        color: var(--color-text-primary) !important;
+        background-color: var(--color-primary) !important;
+        border: 0 !important;
+        outline: none !important;
+        box-shadow: none !important;
+
+        @include flex(center);
+        gap: 4px;
+
+        &:after {
+          display: none !important;
+        }
+
+        &:hover {
+          background-color: rgba(55, 53, 47, 0.08) !important;
+        }
+
+        svg {
+          polygon {
+            fill: var(--color-text-primary) !important;
+          }
+        }
+      }
+
+      &-menu {
+        padding: 6px 0 !important;
+        background-color: var(--color-dropdown-background) !important;
+      }
+
+      &-item {
+        margin: 0 4px;
+        height: 28px;
+        color: var(--color-text-primary) !important;
+
+        &:hover {
+          background-color: var(--color-dropdown-background-hover);
+        }
+
+        @include flex(center, space-between);
+
+        svg {
+          width: 14px !important;
+          height: 14px !important;
+
+          polygon {
+            fill: var(--color-text-primary) !important;
+          }
+        }
+      }
+    }
+  }
+
+  &-logo {
+    width: 45px;
+    height: 45px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  &-title {
+    font-size: 14px;
+
+    @include flex(center);
+    gap: 6px;
+  }
+}

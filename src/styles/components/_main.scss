@@ -1,0 +1,71 @@
+.main {
+  &-heading {
+    padding: 32px 96px 8px;
+
+    &--title {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 54px;
+
+      @include flex(center);
+      gap: 8px;
+    }
+
+    &--sub-title {
+      padding: 3px 0 4px 6px;
+      font-size: 14px;
+      line-height: 21px;
+
+      span {
+        display: inline-block;
+        border-radius: 3px;
+        background-color: var(--color-span-new-background);
+        color: var(--color-span-new-text);
+        font-size: 85%;
+        padding: 2.38px 4.76px;
+        line-height: normal;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &-content {
+    &__nav {
+      height: 40px;
+      margin-left: 96px;
+      margin-right: 96px;
+      border-bottom: 1px solid var(--color-border-secondary);
+
+      @include flex(center);
+
+      button {
+        background-color: var(--color-btn-new-background) !important;
+        color: var(--color-btn-new-text) !important;
+        outline: none !important;
+        box-shadow: none !important;
+        height: 28px !important;
+        width: fit-content !important;
+        padding: 0 8px !important;
+        border: 0 !important;
+        border-radius: 3px !important;
+
+        @include flex(center, center);
+        gap: 8px;
+
+        &:hover {
+          background-color: var(--color-btn-new-background-hover) !important;
+        }
+
+        svg > polygon {
+          fill: var(--color-btn-new-text) !important;
+          fill-opacity: 1 !important;
+        }
+      }
+    }
+
+    &__kanban {
+      padding: 8px 96px 0;
+      // padding: 8px 96px 180px;
+    }
+  }
+}

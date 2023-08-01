@@ -1,0 +1,64 @@
+:root {
+  --color-primary: #ffffff;
+
+  --color-text-primary: #37352f;
+  --color-text-secondary: rgba(55, 53, 47, 0.5);
+
+  --color-border-primary: rgb(55, 53, 47);
+  --color-border-secondary: rgba(55, 53, 47, 0.2);
+
+  --color-span-new-text: #eb5757;
+  --color-span-new-background: rgba(135, 131, 120, 0.15);
+
+  --color-btn-new-text: #ffffff;
+  --color-btn-new-background: rgb(46, 170, 220);
+  --color-btn-new-background-hover: rgb(6, 156, 205);
+
+  --color-span-to-do-text: rgb(93, 23, 21);
+  --color-span-to-do-background: rgb(255, 226, 221);
+  --color-span-doing-text: rgb(64, 44, 27);
+  --color-span-doing-background: rgb(253, 236, 200);
+  --color-span-done-text: rgb(28, 56, 41);
+  --color-span-done-background: rgb(219, 237, 219);
+
+  --color-card-background: #fff;
+
+  --color-modal-new-task-background: #fff;
+
+  --color-dropdown-background: #fff;
+  --color-dropdown-background-hover: rgba(55, 53, 47, 0.08);
+
+  --color-input-box-shadow: rgb(15 15 15 / 10%) 0px 0px 0px 1px, rgb(15 15 15 / 10%) 0px 0px 1px;
+}
+
+[data-theme="dark"] {
+  --color-primary: #191919;
+
+  --color-text-primary: rgba(255, 255, 255, 0.87);
+  --color-text-secondary: rgba(255, 255, 255, 0.443);
+
+  --color-border-primary: rgba(255, 255, 255, 0.87);
+  --color-border-secondary: rgba(255, 255, 255, 0.2);
+
+  --color-span-new-text: #eb5757;
+  --color-span-new-background: rgba(135, 131, 120, 0.15);
+
+  --color-btn-new-text: #ffffff;
+  --color-btn-new-background: rgb(46, 170, 220);
+
+  --color-span-to-do-text: rgba(255, 255, 255, 0.804);
+  --color-span-to-do-background: rgb(110, 54, 48);
+  --color-span-doing-text: rgba(255, 255, 255, 0.804);
+  --color-span-doing-background: rgb(137, 99, 42);
+  --color-span-done-text: rgba(255, 255, 255, 0.804);
+  --color-span-done-background: rgb(43, 89, 63);
+
+  --color-card-background: rgba(255, 255, 255, 0.03);
+
+  --color-modal-new-task-background: #202020;
+
+  --color-dropdown-background: rgb(37, 37, 37);
+  --color-dropdown-background-hover: rgba(255, 255, 255, 0.055);
+
+  --color-input-box-shadow: rgb(15 15 15 / 10%) 0px 0px 0px 1px, rgb(15 15 15 / 10%) 0px 0px 1px;
+}

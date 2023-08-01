@@ -1,0 +1,335 @@
+.modal-new-task {
+  .modal-dialog {
+    max-width: 960px !important;
+    width: 960px !important;
+  }
+
+  .modal-content {
+    background-color: var(--color-modal-new-task-background);
+  }
+
+  .modal-body {
+    padding: 0 126px 126px;
+    position: relative;
+  }
+
+  .task-name {
+    height: 114px;
+    width: 100%;
+
+    @include flex(flex-end);
+    gap: 10px;
+
+    &-input {
+      flex: 1;
+      height: 54px;
+      padding: 3px 2px;
+      border: 0;
+      outline: none;
+      background-color: transparent;
+      color: var(--color-text-primary);
+      font-size: 40px;
+      font-weight: 700;
+
+      &::-webkit-input-placeholder {
+        color: var(--color-text-secondary);
+      }
+      &::-moz-input-placeholder {
+        color: var(--color-text-secondary);
+      }
+    }
+
+    &-length {
+      display: inline-block;
+      padding-bottom: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+    }
+  }
+
+  .form-wrapper {
+    padding: 8px 0;
+  }
+
+  .form-group {
+    height: 38px;
+    width: 100%;
+
+    @include flex(center);
+    gap: 4px;
+
+    &:last-child {
+      height: 130px;
+      align-items: flex-start;
+    }
+
+    label {
+      width: 160px;
+      height: 34px;
+      padding: 0 6px;
+      cursor: pointer;
+      border-radius: 3px;
+
+      &:hover {
+        background-color: var(--color-dropdown-background-hover);
+      }
+
+      @include flex(center);
+      gap: 8px;
+
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+
+      svg {
+        path {
+          fill: var(--color-text-secondary) !important;
+        }
+      }
+    }
+
+    .form-control {
+      height: 34px !important;
+      width: 100% !important;
+      padding: 6px 8px 7px !important;
+      background-color: transparent !important;
+      border: 0 !important;
+      outline: none !important;
+      cursor: pointer !important;
+      border-radius: 3px !important;
+
+      color: var(--color-border-primary) !important;
+      font-size: 14px !important;
+      font-weight: 400 !important;
+
+      &:hover {
+        background-color: var(--color-dropdown-background-hover) !important;
+      }
+
+      &.disable {
+        cursor: no-drop !important;
+      }
+
+      input {
+        background-color: transparent !important;
+        border: 0 !important;
+        outline: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        color: var(--color-text-primary) !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        width: 100% !important;
+
+        &::-webkit-input-placeholder {
+          color: var(--color-text-secondary);
+        }
+        &::-moz-input-placeholder {
+          color: var(--color-text-secondary);
+        }
+      }
+
+      &.deadline {
+        position: relative;
+
+        input[type="date"] {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0 !important;
+
+          &::-webkit-calendar-picker-indicator {
+            position: absolute !important;
+            top: 0 !important;
+            left: -0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            opacity: 0 !important;
+            z-index: 10 !important;
+            cursor: pointer !important;
+          }
+        }
+      }
+
+      &.status {
+        .dropdown-toggle {
+          background-color: transparent !important;
+          border: 0 !important;
+          outline: none !important;
+          box-shadow: none !important;
+          padding: 0 !important;
+          height: 100% !important;
+          width: 100% !important;
+          text-align: left !important;
+          font-size: 14px !important;
+          font-weight: 400 !important;
+          color: var(--color-text-primary);
+          text-transform: capitalize;
+
+          span.empty {
+            color: var(--color-text-secondary);
+          }
+
+          span.todo {
+            display: inline-block;
+            padding: 0 6px;
+            width: fit-content;
+            height: 18px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            border-radius: 3px;
+            background-color: var(--color-span-to-do-background);
+            color: var(--color-span-to-do-text);
+          }
+
+          span.doing {
+            display: inline-block;
+            padding: 0 6px;
+            width: fit-content;
+            height: 18px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            border-radius: 3px;
+            background-color: var(--color-span-doing-background);
+            color: var(--color-span-doing-text);
+          }
+
+          span.done {
+            display: inline-block;
+            padding: 0 6px;
+            width: fit-content;
+            height: 18px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            border-radius: 3px;
+            background-color: var(--color-span-done-background);
+            color: var(--color-span-done-text);
+          }
+
+          &:after {
+            display: none;
+          }
+        }
+
+        .dropdown-menu {
+          padding: 6px 0;
+          background-color: var(--color-dropdown-background);
+          color: var(--color-text-primary);
+
+          p {
+            padding-top: 6px;
+            padding-bottom: 8px;
+            margin: 0 16px;
+            font-size: 12px;
+            font-weight: 500;
+          }
+
+          .dropdown-item {
+            span {
+              display: inline-block;
+              padding: 0 6px;
+              width: fit-content;
+              height: 18px;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 18px;
+              border-radius: 3px;
+            }
+
+            &:nth-child(2) > span {
+              background-color: var(--color-span-to-do-background);
+              color: var(--color-span-to-do-text);
+            }
+
+            &:nth-child(3) > span {
+              background-color: var(--color-span-doing-background);
+              color: var(--color-span-doing-text);
+            }
+
+            &:nth-child(4) > span {
+              background-color: var(--color-span-done-background);
+              color: var(--color-span-done-text);
+            }
+
+            &:hover {
+              background-color: var(--color-dropdown-background-hover);
+            }
+          }
+        }
+      }
+
+      &.description {
+        height: 130px !important;
+        position: relative;
+
+        span {
+          display: inline-block;
+          font-size: 14px;
+          font-weight: 400;
+          color: var(--color-text-secondary);
+          position: absolute;
+          top: 6px;
+          right: 8px;
+        }
+
+        textarea {
+          border: 0 !important;
+          outline: none !important;
+          box-shadow: none !important;
+          background-color: transparent !important;
+          color: var(--color-text-primary);
+          height: 100% !important;
+          width: 100% !important;
+          padding: 0 !important;
+          padding-right: 60px !important;
+          resize: none !important;
+
+          &::-webkit-input-placeholder {
+            color: var(--color-text-secondary);
+          }
+
+          &::-moz-input-placeholder {
+            color: var(--color-text-secondary);
+          }
+        }
+      }
+    }
+  }
+
+  .btn-delete-task {
+    position: absolute !important;
+    top: 8px !important;
+    right: 12px !important;
+    display: inline-block !important;
+    width: 32px !important;
+    height: 32px !important;
+    border: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    border-radius: 3px !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+
+    @include flex(center, center);
+
+    svg {
+      display: inline-block !important;
+      margin: 0 !important;
+
+      path {
+        fill: var(--color-text-primary) !important;
+      }
+    }
+
+    &:hover {
+      background-color: var(--color-dropdown-background-hover) !important;
+    }
+  }
+}
